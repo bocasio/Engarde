@@ -1,0 +1,96 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://objects/collectables/coin.png" type="Texture" id=2]
+[ext_resource path="res://objects/collectables/heart.png" type="Texture" id=3]
+[ext_resource path="res://objects/player/player.png" type="Texture" id=4]
+[ext_resource path="res://scenes/GameOver.gd" type="Script" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 10
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="GameOver" type="Control"]
+margin_top = -16.0
+margin_bottom = -16.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="You Win" type="Label" parent="."]
+margin_top = 32.0
+margin_right = 160.0
+margin_bottom = 42.0
+rect_scale = Vector2( 3, 3 )
+custom_fonts/font = SubResource( 1 )
+text = "You Win!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ocean" type="Label" parent="."]
+margin_top = 72.0
+margin_right = 240.0
+margin_bottom = 82.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "The ocean is saved!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CoinCount" type="Label" parent="."]
+margin_left = -24.0
+margin_top = 104.0
+margin_right = 216.0
+margin_bottom = 114.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "You found 0/7 coins"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="coin" type="Sprite" parent="CoinCount"]
+position = Vector2( 200, 4 )
+texture = ExtResource( 2 )
+
+[node name="Final" type="Label" parent="."]
+margin_top = 136.0
+margin_right = 240.0
+margin_bottom = 146.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/font = SubResource( 1 )
+text = "See if you can find them all!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" type="Sprite" parent="."]
+position = Vector2( 227.52, 234.709 )
+rotation = -0.125664
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="heart" type="Sprite" parent="."]
+position = Vector2( 339.52, 210.709 )
+rotation = 0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+
+[node name="heart2" type="Sprite" parent="."]
+position = Vector2( 123.52, 210.709 )
+rotation = -0.174533
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
